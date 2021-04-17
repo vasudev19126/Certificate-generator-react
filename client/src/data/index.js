@@ -24,19 +24,25 @@ const templates = {
           title: 'Field 1',
           x: 289,
           y: 200,
-          size: 37
+          size: 37,
+          font: 'Montserrat',
+          color: 'white'
         },
         {
           title: 'Field 2',
           x: 340,
           y: 440,
-          size: 18
+          size: 18,
+          font: 'Montserrat',
+          color: 'white'
         },
         {
           title: 'Field 3',
           x: 560,
           y: 440,
-          size: 18
+          size: 18,
+          font: 'Montserrat',
+          color: 'white'
         }
       ]
     }

@@ -126,8 +126,8 @@ function CertificateGeneratorByImage({ data }) {
     imageObj1.onload = function () {
       ctx.drawImage(imageObj1, 0, 0)
       textDrawProperties.map((text, index) => {
-        ctx.font = `${text.size}pt Montserrat`
-        ctx.fillStyle = 'white'
+        ctx.font = `${text.size}pt ${text.font}`
+        ctx.fillStyle = `${text.color}`
         ctx.fillText(data[1][index].title, text.x, text.y)
       })
       forceUpdate(true)
@@ -255,6 +255,32 @@ function CertificateGeneratorByImage({ data }) {
                 label="Size"
                 value={properties.size}
                 type="number"
+                onChange={handleChange(index)}
+                InputLabelProps={{
+                  shrink: true
+                }}
+                variant="outlined"
+              />
+              <TextField
+                className={classes.textField}
+                value={properties.font}
+                name="font"
+                id="fontStyle"
+                label="Font"
+                type="text"
+                onChange={handleChange(index)}
+                InputLabelProps={{
+                  shrink: true
+                }}
+                variant="outlined"
+              />
+              <TextField
+                className={classes.textField}
+                value={properties.color}
+                name="color"
+                id="fontColor"
+                label="Color"
+                type="text"
                 onChange={handleChange(index)}
                 InputLabelProps={{
                   shrink: true
